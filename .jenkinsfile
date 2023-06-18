@@ -1,0 +1,11 @@
+pipeline {
+agent any
+stages {
+    stage('test') {
+        steps {
+                sh 'npm install'
+                sh 'npm run sample-local-test'
+            }
+        }
+    }
+}
