@@ -59,6 +59,10 @@ const config = {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
+    {
+      name: 'Microsoft Edge',
+      use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
