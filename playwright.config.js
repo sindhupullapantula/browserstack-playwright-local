@@ -52,16 +52,13 @@ const config = {
 
   /* Configure projects for major browsers */
   projects: [
-    !process.env.LOCAL_PLAYWRIGHT ? {
-      name: 'chrome@latest:Windows 11',
-      use: {
-        connectOptions: { wsEndpoint: getCdpEndpoint('chrome@latest:Windows 11','test1') },
-      },
-    } : {
+    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    }
-    
+    }, {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
